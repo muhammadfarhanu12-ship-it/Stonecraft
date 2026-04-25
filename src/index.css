@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 5.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5.1%;
+
+    --primary: 0 0% 5.1%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 10.2%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 6% 95%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 37 43% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 10% 90%;
+    --input: 40 10% 90%;
+    --ring: 37 43% 60%;
+
+    --radius: 0.5rem;
+
+    --gold: 37 43% 60%;
+    --gold-light: 37 50% 75%;
+    --gold-dark: 37 40% 45%;
+    --surface: 40 10% 97%;
+    --surface-dark: 0 0% 6.7%;
+    --surface-darker: 0 0% 10%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg;
+  }
+
+  .glass-dark {
+    background: rgba(17, 17, 17, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(201, 166, 107, 0.15);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 50%, hsl(var(--gold)) 100%);
+  }
+
+  .gold-text {
+    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 50%, hsl(var(--gold)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(13, 13, 13, 0.75) 0%,
+      rgba(13, 13, 13, 0.35) 40%,
+      rgba(13, 13, 13, 0.65) 100%
+    );
+  }
+
+  .hero-overlay-stronger {
+    background: linear-gradient(
+      180deg,
+      rgba(13, 13, 13, 0.85) 0%,
+      rgba(13, 13, 13, 0.6) 50%,
+      rgba(13, 13, 13, 0.9) 100%
+    );
+  }
+
+  .brand-strip {
+    @apply bg-primary text-primary-foreground;
+    border-top: 1px solid hsl(var(--gold) / 0.2);
+    border-bottom: 1px solid hsl(var(--gold) / 0.2);
+  }
+
+  .collection-card {
+    @apply relative overflow-hidden rounded-lg cursor-pointer;
+  }
+  .collection-card img {
+    @apply w-full h-full object-cover transition-transform duration-700;
+  }
+  .collection-card:hover img {
+    transform: scale(1.08);
+  }
+
+  .section-dark {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .section-light {
+    background: hsl(var(--surface));
+  }
+
+  .hover-lift {
+    @apply transition-all duration-500;
+  }
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.15);
+  }
+
+  .trust-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium;
+    background: hsl(var(--gold) / 0.1);
+    color: hsl(var(--gold-dark));
+    border: 1px solid hsl(var(--gold) / 0.2);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
