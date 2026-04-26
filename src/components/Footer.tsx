@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="flex flex-col gap-3">
               <a href="tel:+923001234567" className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-gold transition-colors">
                 <Phone size={14} />
-                +92 300 123 4567
+                +92 342 533 7963
               </a>
               <a href="mailto:info@stonecraft.com" className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-gold transition-colors">
                 <Mail size={14} />

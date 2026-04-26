@@ -135,7 +135,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-foreground">Phone</p>
-                      <p className="text-sm">+92 300 123 4567</p>
+                      <p className="text-sm">+92 342 533 7963</p>
                     </div>
                   </a>
                   <a href="mailto:info@stonecraft.com" className="flex items-center gap-3 text-muted-foreground hover:text-gold transition-colors">
