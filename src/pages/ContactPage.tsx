@@ -161,7 +161,7 @@ const ContactPage = () => {
 
               <div className="space-y-3">
                 <a
-                  href="https://wa.me/923001234567?text=Hi%2C%20I%27m%20interested%20in%20your%20products"
+                  href="https://wa.me/923425337963?text=Hi%2C%20I%27m%20interested%20in%20your%20products"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full py-3.5 rounded-lg text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
