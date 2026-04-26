@@ -153,7 +153,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-foreground">Address</p>
-                      <p className="text-sm">Industrial Area, Lahore, Pakistan</p>
+                      <p className="text-sm">Industrial Area, Rawalpindi, Pakistan</p>
                     </div>
                   </div>
                 </div>
@@ -170,7 +170,7 @@ const ContactPage = () => {
                   <MessageCircle size={18} /> Chat on WhatsApp
                 </a>
                 <a
-                  href="tel:+923001234567"
+                  href="tel:+923425337963"
                   className="flex items-center justify-center gap-2 w-full py-3.5 rounded-lg border border-border text-sm font-semibold text-foreground hover:bg-muted transition-colors"
                 >
                   <Phone size={18} /> Call Now
