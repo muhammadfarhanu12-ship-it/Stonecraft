@@ -32,7 +32,7 @@ const CtaSection = () => (
             Request a Quote <ArrowRight size={16} />
           </Link>
           <a
-            href="https://wa.me/923001234567"
+            href="https://wa.me/923425337963"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-gold/30 px-12 py-4 rounded-sm text-sm font-bold tracking-[0.15em] uppercase text-gold inline-flex items-center gap-3 hover:bg-gold/10 transition-colors"

@@ -129,7 +129,7 @@ const ContactPage = () => {
               <div>
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-4">Contact Information</h3>
                 <div className="space-y-4">
-                  <a href="tel:+923001234567" className="flex items-center gap-3 text-muted-foreground hover:text-gold transition-colors">
+                  <a href="tel:+923425337963" className="flex items-center gap-3 text-muted-foreground hover:text-gold transition-colors">
                     <div className="w-10 h-10 rounded-full gold-gradient flex items-center justify-center shrink-0">
                       <Phone size={16} className="text-primary" />
                     </div>

@@ -71,7 +71,7 @@ const ConstructionPage = () => {
                       Order Now
                     </Link>
                     <a
-                      href="tel:+923001234567"
+                      href="tel:+923425337963"
                       className="flex items-center justify-center px-4 py-2 rounded-sm border border-border text-xs font-bold tracking-wider uppercase text-foreground hover:bg-muted transition-colors"
                     >
                       <Phone size={12} className="mr-1" /> Call
@@ -101,7 +101,7 @@ const ConstructionPage = () => {
               Get Bulk Quote <ArrowRight size={16} />
             </Link>
             <a
-              href="tel:+923001234567"
+              href="tel:+923425337963"
               className="border border-gold/40 px-8 py-4 rounded-sm text-sm font-bold tracking-wider uppercase text-gold inline-flex items-center gap-2 hover:bg-gold/10 transition-colors"
             >
               <Phone size={16} /> Call for Pricing
