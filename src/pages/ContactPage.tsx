@@ -153,7 +153,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-foreground">Address</p>
-                      <p className="text-sm">Industrial Area, Rawalpindi, Pakistan</p>
+                      <p className="text-sm">Industrial Area, Islamabad, Pakistan</p>
                     </div>
                   </div>
                 </div>

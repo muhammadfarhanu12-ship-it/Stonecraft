@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import MarblePage from "./pages/MarblePage";
 import ConstructionPage from "./pages/ConstructionPage";
@@ -13,6 +14,13 @@ import ExportsPage from "./pages/ExportsPage";
 import ExportProductsPage from "./pages/ExportProductsPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import BlogPage from "./pages/BlogPage";
+import BlogPostPage from "./pages/BlogPostPage";
+import MarbleCategoryPage from "./pages/MarbleCategoryPage";
+import MarbleProductPage from "./pages/MarbleProductPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ProjectDetailPage from "./pages/ProjectDetailPage";
+import LocationPage from "./pages/LocationPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,22 +30,29 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter
-        future={{
-          v7_startTransition: true,
-          v7_relativeSplatPath: true,
-        }}
-      >
+      <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <main>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/marble" element={<MarblePage />} />
+            <Route path="/marble/category/:slug" element={<MarbleCategoryPage />} />
+            <Route path="/marble/:slug" element={<MarbleProductPage />} />
             <Route path="/construction" element={<ConstructionPage />} />
             <Route path="/exports" element={<ExportsPage />} />
             <Route path="/export-products" element={<ExportProductsPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects/:slug" element={<ProjectDetailPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/marble-in-lahore" element={<LocationPage />} />
+            <Route path="/marble-in-islamabad" element={<LocationPage />} />
+            <Route path="/marble-in-karachi" element={<LocationPage />} />
+            <Route path="/marble-supplier-pakistan" element={<LocationPage />} />
+            <Route path="/marble-exporter-pakistan" element={<LocationPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
