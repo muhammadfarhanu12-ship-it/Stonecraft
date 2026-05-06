@@ -15,12 +15,36 @@ const navLinks: NavItem[] = [
     label: "Marble",
     path: "/marble",
     children: [
-      { label: "White Marble", path: "/marble/category/white-marble", description: "Carrara, Calacatta, Ziarat" },
-      { label: "Black Marble", path: "/marble/category/black-marble", description: "Nero Marquina, Jet Black" },
-      { label: "Granite", path: "/marble/category/granite", description: "Absolute Black, Black Galaxy" },
-      { label: "Onyx", path: "/marble/category/onyx", description: "Honey, Green, backlit slabs" },
-      { label: "Travertine", path: "/marble/category/travertine", description: "Classic & silver travertine" },
-      { label: "Luxury Stone", path: "/marble/category/luxury-stone", description: "Verde Guatemala, Emperador" },
+      {
+        label: "White Marble",
+        path: "/marble/category/white-marble",
+        description: "Carrara, Calacatta, Ziarat",
+      },
+      {
+        label: "Black Marble",
+        path: "/marble/category/black-marble",
+        description: "Nero Marquina, Jet Black",
+      },
+      {
+        label: "Granite",
+        path: "/marble/category/granite",
+        description: "Absolute Black, Black Galaxy",
+      },
+      {
+        label: "Onyx",
+        path: "/marble/category/onyx",
+        description: "Honey, Green, backlit slabs",
+      },
+      {
+        label: "Travertine",
+        path: "/marble/category/travertine",
+        description: "Classic & silver travertine",
+      },
+      {
+        label: "Luxury Stone",
+        path: "/marble/category/luxury-stone",
+        description: "Verde Guatemala, Emperador",
+      },
     ],
   },
   { label: "Construction", path: "/construction" },
@@ -28,11 +52,31 @@ const navLinks: NavItem[] = [
     label: "Exports",
     path: "/exports",
     children: [
-      { label: "Export Countries", path: "/exports/countries", description: "25+ destinations served" },
-      { label: "Shipping Process", path: "/exports/shipping-process", description: "FOB, CIF & DDP terms" },
-      { label: "Packaging Standards", path: "/exports/packaging-standards", description: "A-frame export packing" },
-      { label: "Certifications", path: "/exports/certifications", description: "ISO & quality grades" },
-      { label: "Export Inquiry", path: "/exports/inquiry", description: "Request a container quote" },
+      {
+        label: "Export Countries",
+        path: "/exports/countries",
+        description: "25+ destinations served",
+      },
+      {
+        label: "Shipping Process",
+        path: "/exports/shipping-process",
+        description: "FOB, CIF & DDP terms",
+      },
+      {
+        label: "Packaging Standards",
+        path: "/exports/packaging-standards",
+        description: "A-frame export packing",
+      },
+      {
+        label: "Certifications",
+        path: "/exports/certifications",
+        description: "ISO & quality grades",
+      },
+      {
+        label: "Export Inquiry",
+        path: "/exports/inquiry",
+        description: "Request a container quote",
+      },
     ],
   },
   { label: "Export Products", path: "/export-products" },
@@ -64,16 +108,16 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "glass-dark shadow-2xl"
-          : "bg-transparent"
+        scrolled ? "glass-dark shadow-2xl" : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-heading text-2xl font-bold tracking-wide gold-text">
-            STONECRAFT
-          </span>
+          <img
+            src="/logo.png"
+            alt="StoneCraft"
+            className="h-14 md:h-16 object-contain"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -93,7 +137,9 @@ const Navbar = () => {
                   <Link
                     to={link.path}
                     className={`flex items-center gap-1 whitespace-nowrap text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
-                      active ? "text-gold" : "text-primary-foreground/80 hover:text-gold"
+                      active
+                        ? "text-gold"
+                        : "text-primary-foreground/80 hover:text-gold"
                     }`}
                   >
                     {link.label}
@@ -119,7 +165,9 @@ const Navbar = () => {
                                 {c.label}
                               </div>
                               {c.description && (
-                                <div className="text-xs text-primary-foreground/50 mt-0.5">{c.description}</div>
+                                <div className="text-xs text-primary-foreground/50 mt-0.5">
+                                  {c.description}
+                                </div>
                               )}
                             </Link>
                           ))}
@@ -135,7 +183,9 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 className={`whitespace-nowrap text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
-                  active ? "text-gold" : "text-primary-foreground/80 hover:text-gold"
+                  active
+                    ? "text-gold"
+                    : "text-primary-foreground/80 hover:text-gold"
                 }`}
               >
                 {link.label}
@@ -175,14 +225,20 @@ const Navbar = () => {
                     <Link
                       to={link.path}
                       className={`whitespace-nowrap text-sm font-medium tracking-wider uppercase ${
-                        location.pathname === link.path ? "text-gold" : "text-primary-foreground/80"
+                        location.pathname === link.path
+                          ? "text-gold"
+                          : "text-primary-foreground/80"
                       }`}
                     >
                       {link.label}
                     </Link>
                     {link.children && (
                       <button
-                        onClick={() => setMobileSub(mobileSub === link.label ? null : link.label)}
+                        onClick={() =>
+                          setMobileSub(
+                            mobileSub === link.label ? null : link.label,
+                          )
+                        }
                         className="text-primary-foreground/60 p-1"
                         aria-label="Toggle submenu"
                       >
