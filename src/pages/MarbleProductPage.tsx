@@ -95,7 +95,7 @@ export default function MarbleProductPage() {
             {/* Info */}
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-gold-dark mb-3">{product.origin}</p>
-              <h1 className="font-heading text-4xl md:text-5xl text-primary mb-4">{product.name}</h1>
+              <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl text-primary mb-4">{product.name}</h1>
               <p className="text-lg text-primary/70 leading-relaxed mb-8">{product.description}</p>
 
               {/* Specs */}

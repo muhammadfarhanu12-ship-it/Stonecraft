@@ -12,6 +12,11 @@ import MarblePage from "./pages/MarblePage";
 import ConstructionPage from "./pages/ConstructionPage";
 import ExportsPage from "./pages/ExportsPage";
 import ExportProductsPage from "./pages/ExportProductsPage";
+import ExportCountriesPage from "./pages/exports/ExportCountriesPage";
+import ShippingProcessPage from "./pages/exports/ShippingProcessPage";
+import PackagingStandardsPage from "./pages/exports/PackagingStandardsPage";
+import CertificationsPage from "./pages/exports/CertificationsPage";
+import ExportInquiryPage from "./pages/exports/ExportInquiryPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
@@ -41,6 +46,11 @@ const App = () => (
             <Route path="/marble/:slug" element={<MarbleProductPage />} />
             <Route path="/construction" element={<ConstructionPage />} />
             <Route path="/exports" element={<ExportsPage />} />
+            <Route path="/exports/countries" element={<ExportCountriesPage />} />
+            <Route path="/exports/shipping-process" element={<ShippingProcessPage />} />
+            <Route path="/exports/packaging-standards" element={<PackagingStandardsPage />} />
+            <Route path="/exports/certifications" element={<CertificationsPage />} />
+            <Route path="/exports/inquiry" element={<ExportInquiryPage />} />
             <Route path="/export-products" element={<ExportProductsPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects/:slug" element={<ProjectDetailPage />} />

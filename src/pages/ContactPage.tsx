@@ -18,7 +18,7 @@ const ContactPage = () => {
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3 block">Get in Touch</span>
-            <h1 className="font-heading text-4xl md:text-6xl font-bold text-primary-foreground mb-4">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4">
               Contact <span className="gold-text">Us</span>
             </h1>
             <p className="text-primary-foreground/60 max-w-xl text-lg">
@@ -153,7 +153,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-foreground">Address</p>
-                      <p className="text-sm">Industrial Area, Islamabad, Pakistan</p>
+                      <p className="text-sm">Industrial Area, Lahore, Pakistan</p>
                     </div>
                   </div>
                 </div>

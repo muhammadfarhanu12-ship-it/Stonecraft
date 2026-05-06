@@ -49,7 +49,7 @@ export default function MarbleCategoryPage() {
         <div className="hero-overlay-stronger absolute inset-0" />
         <div className="container mx-auto px-6 relative">
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Marble", path: "/marble" }, { name: cat.title }]} />
-          <h1 className="font-heading text-4xl md:text-6xl text-primary-foreground mt-6 mb-4">
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground mt-6 mb-4">
             <span className="gold-text">{cat.title}</span>
           </h1>
           <p className="text-primary-foreground/70 max-w-2xl text-lg">{cat.description}</p>

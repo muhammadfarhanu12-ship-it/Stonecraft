@@ -46,7 +46,7 @@ export default function ProjectDetailPage() {
         <div className="hero-overlay absolute inset-0" />
         <div className="container mx-auto px-6 relative h-full flex flex-col justify-end pb-12">
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Projects", path: "/projects" }, { name: project.title }]} />
-          <h1 className="font-heading text-4xl md:text-6xl text-primary-foreground mt-6">{project.title}</h1>
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground mt-6">{project.title}</h1>
           <div className="flex flex-wrap gap-5 mt-4 text-sm text-primary-foreground/70">
             <span className="flex items-center gap-2"><MapPin size={14} /> {project.location}</span>
             <span className="flex items-center gap-2"><Layers size={14} /> {project.marbleType}</span>

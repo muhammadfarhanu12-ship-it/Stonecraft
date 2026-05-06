@@ -43,7 +43,7 @@ export default function BlogPage() {
       <section className="pt-32 pb-12 section-dark">
         <div className="container mx-auto px-6">
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Blog" }]} />
-          <h1 className="font-heading text-4xl md:text-6xl text-primary-foreground mt-6 mb-4">
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground mt-6 mb-4">
             The <span className="gold-text">Marble Journal</span>
           </h1>
           <p className="text-primary-foreground/60 max-w-2xl text-lg">

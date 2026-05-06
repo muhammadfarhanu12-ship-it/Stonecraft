@@ -28,11 +28,11 @@ const navLinks: NavItem[] = [
     label: "Exports",
     path: "/exports",
     children: [
-      { label: "Export Countries", path: "/exports#countries", description: "25+ destinations served" },
-      { label: "Shipping Process", path: "/exports#shipping", description: "FOB, CIF & DDP terms" },
-      { label: "Packaging Standards", path: "/exports#packaging", description: "A-frame export packing" },
-      { label: "Certifications", path: "/exports#certifications", description: "ISO & quality grades" },
-      { label: "Export Inquiry", path: "/contact?type=export", description: "Request a container quote" },
+      { label: "Export Countries", path: "/exports/countries", description: "25+ destinations served" },
+      { label: "Shipping Process", path: "/exports/shipping-process", description: "FOB, CIF & DDP terms" },
+      { label: "Packaging Standards", path: "/exports/packaging-standards", description: "A-frame export packing" },
+      { label: "Certifications", path: "/exports/certifications", description: "ISO & quality grades" },
+      { label: "Export Inquiry", path: "/exports/inquiry", description: "Request a container quote" },
     ],
   },
   { label: "Export Products", path: "/export-products" },
@@ -65,11 +65,11 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "glass-dark py-3 shadow-2xl"
-          : "bg-transparent py-5"
+          ? "glass-dark shadow-2xl"
+          : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-6">
+      <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-2">
           <span className="font-heading text-2xl font-bold tracking-wide gold-text">
             STONECRAFT
@@ -77,7 +77,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-7">
+        <div className="hidden lg:flex items-center gap-6 whitespace-nowrap">
           {navLinks.map((link) => {
             const active =
               location.pathname === link.path ||
@@ -92,7 +92,7 @@ const Navbar = () => {
                 >
                   <Link
                     to={link.path}
-                    className={`flex items-center gap-1 text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
+                    className={`flex items-center gap-1 whitespace-nowrap text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
                       active ? "text-gold" : "text-primary-foreground/80 hover:text-gold"
                     }`}
                   >
@@ -134,7 +134,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
+                className={`whitespace-nowrap text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
                   active ? "text-gold" : "text-primary-foreground/80 hover:text-gold"
                 }`}
               >
@@ -144,7 +144,7 @@ const Navbar = () => {
           })}
           <Link
             to="/contact"
-            className="gold-gradient px-6 py-2.5 rounded-sm text-sm font-semibold tracking-wider uppercase text-primary transition-opacity hover:opacity-90"
+            className="gold-gradient whitespace-nowrap rounded-sm px-5 py-2.5 text-[14px] font-semibold tracking-wider uppercase text-primary transition-opacity hover:opacity-90"
           >
             Get Quote
           </Link>
@@ -168,13 +168,13 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden glass-dark overflow-hidden"
           >
-            <div className="container mx-auto px-6 py-6 flex flex-col gap-1 max-h-[80vh] overflow-y-auto">
+            <div className="mx-auto flex w-full max-w-[1280px] max-h-[80vh] flex-col gap-1 overflow-y-auto px-4 py-6">
               {navLinks.map((link) => (
                 <div key={link.path} className="border-b border-gold/10">
                   <div className="flex items-center justify-between py-3">
                     <Link
                       to={link.path}
-                      className={`text-sm font-medium tracking-wider uppercase ${
+                      className={`whitespace-nowrap text-sm font-medium tracking-wider uppercase ${
                         location.pathname === link.path ? "text-gold" : "text-primary-foreground/80"
                       }`}
                     >
@@ -206,7 +206,7 @@ const Navbar = () => {
                             <Link
                               key={c.path}
                               to={c.path}
-                              className="text-xs text-primary-foreground/70 hover:text-gold py-1.5 tracking-wide uppercase"
+                              className="whitespace-nowrap text-xs text-primary-foreground/70 hover:text-gold py-1.5 tracking-wide uppercase"
                             >
                               {c.label}
                             </Link>
@@ -219,7 +219,7 @@ const Navbar = () => {
               ))}
               <Link
                 to="/contact"
-                className="gold-gradient px-6 py-3 rounded-sm text-sm font-semibold tracking-wider uppercase text-primary text-center mt-4"
+                className="gold-gradient mt-4 whitespace-nowrap rounded-sm px-5 py-2.5 text-center text-[14px] font-semibold tracking-wider uppercase text-primary"
               >
                 Get Quote
               </Link>

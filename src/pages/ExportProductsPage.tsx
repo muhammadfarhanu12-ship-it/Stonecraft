@@ -229,7 +229,7 @@ const ExportProductsPage = () => {
         <div className="relative container mx-auto px-6 pt-24 pb-12 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <span className="text-gold text-sm font-semibold tracking-[0.25em] uppercase mb-4 block">Export Collection</span>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-5 leading-tight">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-5 leading-tight">
               Premium Marble & Granite<br /><span className="gold-text">Export Collection</span>
             </h1>
             <p className="text-primary-foreground/60 max-w-2xl mx-auto text-lg leading-relaxed">

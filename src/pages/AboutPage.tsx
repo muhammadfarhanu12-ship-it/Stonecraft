@@ -16,7 +16,7 @@ const AboutPage = () => {
         <div className="relative container mx-auto px-6 pt-20">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3 block">Our Story</span>
-            <h1 className="font-heading text-4xl md:text-6xl font-bold text-primary-foreground mb-4">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4">
               About <span className="gold-text">StoneCraft</span>
             </h1>
             <p className="text-primary-foreground/60 max-w-xl text-lg">
@@ -96,7 +96,7 @@ const AboutPage = () => {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
               >
-                <p className="font-heading text-4xl md:text-5xl font-bold gold-text mb-2">{stat.number}</p>
+                <p className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold gold-text mb-2">{stat.number}</p>
                 <p className="text-primary-foreground/60 text-sm">{stat.label}</p>
               </motion.div>
             ))}

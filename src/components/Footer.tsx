@@ -89,7 +89,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-2 text-sm text-primary-foreground/60">
                 <MapPin size={14} className="mt-0.5 shrink-0" />
-                Industrial Area, Islamabad, Pakistan
+                Industrial Area, Lahore, Pakistan
               </div>
             </div>
           </div>

@@ -31,7 +31,7 @@ export default function LocationPage() {
       <section className="pt-32 pb-12 section-dark">
         <div className="container mx-auto px-6">
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: page.city }]} />
-          <h1 className="font-heading text-4xl md:text-6xl text-primary-foreground mt-6 mb-5 max-w-4xl">
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground mt-6 mb-5 max-w-4xl">
             {page.title.split("—")[0]}
             <span className="gold-text"> — {page.title.split("—")[1]?.trim()}</span>
           </h1>
