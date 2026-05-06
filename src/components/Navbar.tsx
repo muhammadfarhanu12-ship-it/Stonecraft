@@ -111,7 +111,7 @@ const Navbar = () => {
         scrolled ? "glass-dark shadow-2xl" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-4">
+      <div className="mx-auto flex h-20 w-full max-w-[1180px] items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-2">
           <img
             src="/logo.png"
